@@ -66,9 +66,9 @@ private:
     bool hasCDBackoffTimerExpired (uint8_t PrioDelay = 0);
 
     Stream * 	_serialPort;
-    uint64_t 	_cdBackoffStart;
-    uint64_t 	_cdBackoffTimeout;
-    uint64_t 	_collisionTimeout;
+    uint32_t 	_cdBackoffStart;
+    uint32_t 	_cdBackoffTimeout;
+    uint32_t 	_collisionTimeout;
     LN_STATUS	_state;
 };
 
