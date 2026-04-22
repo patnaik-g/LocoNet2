@@ -66,8 +66,9 @@
 #pragma once
 
 #include <map>
-
-// #include <Embedded_Template_Library.h> // Mandatory for Arduino IDE only
+#ifdef ARDUINO
+#include <Embedded_Template_Library.h> // Mandatory for Arduino IDE only
+#endif
 #include <etl/vector.h>
 #include <vector>
 #include <functional>
@@ -87,7 +88,7 @@
 // #include "LocoNetStream.h"
 
 // Uncomment the next line to enable library DEBUG Messages
-#define DEBUG_OUTPUT
+//#define DEBUG_OUTPUT
 
 #ifdef DEBUG_OUTPUT
     #include <cstdio>

@@ -43,7 +43,7 @@ LN_STATUS LocoNetStream::sendLocoNetPacketTry (uint8_t *packetData, uint8_t pack
         {
             _serialPort->write (packetData, 1);
 
-            uint64_t startMillis = millis();
+            uint32_t startMillis = millis();
             int inByte = _serialPort->read();
             while (inByte == -1 and ( (millis() - startMillis) < 2))
                 inByte = _serialPort->read();
